@@ -11,15 +11,72 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
-          child: Container(
-            height: 100.0,
-            width: 100.0,
-            margin: EdgeInsets.only(left: 30.0),
-            padding: EdgeInsets.all(20.0),
-            color: Colors.white,
-            child: Text('Hello!'),
-          ),
-        ),
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            CircleAvatar(
+              radius: 50.0,
+              backgroundImage: AssetImage('images/Outdoor Profile Pic.png'),
+            ),
+            Text(
+              'Marcus Kim',
+              style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'Pacifico'),
+            ),
+            Text(
+              'MOBILE APP DEVELOPER',
+              style: TextStyle(
+                  fontSize: 15.0,
+                  color: Colors.teal[100],
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSansPro'),
+            ),
+            SizedBox(
+              height: 20.0,
+              width: 150.0,
+              child: Divider(
+                color: Colors.teal.shade100,
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.phone,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  '+1 (949) 300-2699',
+                  style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 15.0,
+                      color: Colors.teal),
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.white,
+              margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+              child: ListTile(
+                leading: Icon(
+                  Icons.email,
+                  color: Colors.teal,
+                ),
+                title: Text(
+                  'marcuskim1989@gmail.com',
+                  style: TextStyle(
+                      fontFamily: 'SourceSansPro',
+                      fontSize: 15.0,
+                      color: Colors.teal),
+                ),
+              ),
+            ),
+          ],
+        )),
       ),
     );
   }
